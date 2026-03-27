@@ -1,0 +1,17 @@
+.card-blog{
+   display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 420px;
+    height: 560px;
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card-blog img{
+    border-radius: 40px;
+}
+.description-blog, .hashtags-blog{
+    opacity: 0.6;
+}

@@ -1,0 +1,104 @@
+/* База: переменные, типографика, кнопки, layout */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Golos+Text:wght@400;500;600;700&display=swap');
+
+/* Переменные */
+:root {
+    --bg-primary:    #0a0a0a;
+    --bg-secondary:  #111111;
+    --bg-card:       #161616;
+    --bg-card-hover: #1c1c1c;
+    --accent:        #ff2d2d;
+    --accent-hover:  #e02020;
+    --text-1:        #ffffff;
+    --text-2:        #888888;
+    --text-3:        #555555;
+    --border:        #2a2a2a;
+    --font-head:     'Unbounded', sans-serif;
+    --font-body:     'Golos Text', sans-serif;
+    --grad-mesh:
+        radial-gradient(at 59% 100%, hsla(154,67%,87%,1)  0px, transparent 50%),
+        radial-gradient(at  0% 100%, hsla(0,97%,60%,1)    0px, transparent 50%),
+        radial-gradient(at 61%  36%, hsla(15,99%,60%,1)   0px, transparent 50%),
+        radial-gradient(at 90%  11%, hsla(10,76%,68%,1)   0px, transparent 50%),
+        radial-gradient(at 42%   9%, hsla(355,100%,93%,1) 0px, transparent 50%);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; }
+body  {
+    background: var(--bg-primary);
+    color: var(--text-1);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.wrap   { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+.section { padding: 80px 0; }
+
+
+.gradient-text {
+    background: linear-gradient(to right, #e8f5e9 10%, #ff9800 20%, #ff8a80 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.section-title {
+    font-family: var(--font-head);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 48px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all .25s ease;
+    white-space: nowrap;
+    letter-spacing: .02em;
+}
+.btn-primary {
+    background: linear-gradient(90deg, #fefce8, #f97316, #ef4444);
+    color: #ffffff;
+}
+.btn-primary:hover {
+    filter: brightness(1.02);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 30px rgba(248,113,113,.45);
+}
+.btn-outline {
+    background: transparent;
+    color: var(--text-1);
+    border: 1px solid var(--border);
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.btn-sm { padding: 8px 20px; font-size: 12px; }
+.btn-arrow::after { content: '→'; font-size: 16px; transition: transform .2s; }
+.btn-arrow:hover::after { transform: translateX(3px); }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
