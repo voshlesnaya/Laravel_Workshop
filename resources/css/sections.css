@@ -93,7 +93,64 @@
 .contact__phone:hover { color: var(--accent); }
 
 
+.form-check { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--text-3); line-height: 1.5; cursor: pointer; }
+.form-check input { width: 15px; height: 15px; accent-color: var(--accent); flex-shrink: 0; margin-top: 2px; cursor: pointer; }
+.form-check a { color: var(--accent); text-decoration: none; }
 
+.alert-success {
+    background: rgba(39,174,96,.12);
+    border: 1px solid rgba(39,174,96,.3);
+    color: #2ecc71;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: 48px 0 28px;
+}
+.footer__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 36px;
+}
+.footer__logo { display: flex; flex-direction: column; gap: 4px; text-decoration: none; margin-bottom: 14px; }
+.footer__logo-icon { font-size: 24px; font-weight: 700; color: var(--text-1); }
+.footer__logo-text { font-size: 12px; color: var(--text-3); }
+.footer__logo-img { height: 40px; width: auto; }
+.footer__contact { font-size: 12px; color: var(--text-3); line-height: 1.8; }
+.footer__contact a { color: var(--text-2); text-decoration: none; transition: color .2s; display: block; }
+
+.footer__nav a { font-size: 16px; color: white; text-decoration: none; }
+.footer__social { display: flex; gap: 10px; margin-bottom: 16px; }
+.social-btn {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+   
+};
+.footer__form {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    width: 280px;
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 22px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px; color: white;
+}
+.footer__bottom a { color: var(--text-3); text-decoration: none; }
+.footer__bottom a:hover { color: var(--accent); }
 
 @media (max-width: 1024px) {
     .achievements__grid { grid-template-columns: 1fr; gap: 28px; }
