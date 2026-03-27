@@ -90,11 +90,11 @@ function infiniteSlider() {
             }
 
             if (window.innerWidth >= 1024) {
-                this.gap = 24; // lg:gap-6
+                this.gap = 24; 
             } else if (window.innerWidth >= 640) {
-                this.gap = 20; // sm:gap-5
+                this.gap = 20; 
             } else {
-                this.gap = 16; // gap-4
+                this.gap = 16; 
             }
         },
 
